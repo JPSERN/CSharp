@@ -12,6 +12,14 @@
       margin-bottom: 5px;
     }
 
+    .output {
+      width: 400px;
+      height: 180px;
+      border: solid 3px #FFF;
+      background-color: #000;
+      color: #FFF;
+    }
+
     input[type=submit] {
       background-color: #6d9af7;
       font-size: 24px;
@@ -32,6 +40,14 @@
     
     <div class="test">
       <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    </div>
+
+    <div class="test output">
+      <asp:Label ID="Label1" runat="server" Text="初期値"></asp:Label>
+    </div>
+
+    <div class="test">
+      <asp:Button ID="Button1" runat="server" Text="出力！" OnClick="Button1_OnClick" />
     </div>
 
     <div class="test">
