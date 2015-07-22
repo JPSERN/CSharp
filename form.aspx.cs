@@ -14,6 +14,9 @@ public partial class FormTest : System.Web.UI.Page
 
     protected void Button1_OnClick(object sender, EventArgs e)
     {
-        Label1.Text = TextBox1.Text;
+        if (String.IsNullOrEmpty(TextBox1.Text) == false)
+        {
+            Label1.Text = TextBox1.Text;
+        }
     }
 }
