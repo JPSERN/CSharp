@@ -19,4 +19,10 @@ public partial class FormTest : System.Web.UI.Page
             Label1.Text = TextBox1.Text;
         }
     }
+
+    protected void Button2_OnClick(object sender, EventArgs e)
+    {
+        Label2.Text = CheckBoxList1.SelectedItem.Text;
+    }
+
 }

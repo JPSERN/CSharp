@@ -58,6 +58,14 @@
     </asp:CheckBoxList>
     </div>
 
+    <div class="test output">
+      <asp:Label ID="Label2" runat="server" Text="チェックボックス初期値"></asp:Label>
+    </div>
+
+    <div class="test">
+      <asp:Button ID="Button2" runat="server" Text="出力！" OnClick="Button2_OnClick" />
+    </div>
+
     <div class="test">
     <asp:RadioButtonList ID="RadioButtonList1" runat="server">
       <asp:ListItem Value="ListItem1">radio1</asp:ListItem>
