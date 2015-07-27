@@ -4,12 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 public partial class FormTest : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Debug.WriteLine("aaa");
     }
 
     protected void Button1_OnClick(object sender, EventArgs e)
@@ -17,6 +18,7 @@ public partial class FormTest : System.Web.UI.Page
         if (String.IsNullOrEmpty(TextBox1.Text) == false)
         {
             Label1.Text = TextBox1.Text;
+            Debug.WriteLine("Button1 clicked.");
         }
     }
 
