@@ -10,21 +10,7 @@ public partial class FormTest : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Debug.WriteLine("aaa");
+        Debug.WriteLine("フォームテストなう");
+        Debug.WriteLine("ここにPOSTされた値を出したい");
     }
-
-    protected void Button1_OnClick(object sender, EventArgs e)
-    {
-        if (String.IsNullOrEmpty(TextBox1.Text) == false)
-        {
-            Label1.Text = TextBox1.Text;
-            Debug.WriteLine("Button1 clicked.");
-        }
-    }
-
-    protected void Button2_OnClick(object sender, EventArgs e)
-    {
-        Label2.Text = CheckBoxList1.SelectedItem.Text;
-    }
-
 }
