@@ -11,6 +11,6 @@ public partial class FormTest : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Debug.WriteLine("フォームテストなう");
-        Debug.WriteLine("ここにPOSTされた値を出したい");
+        Debug.WriteLine(Request.Form.Get("textbox"));
     }
 }
