@@ -50,6 +50,10 @@
     </div>
 
     <div class="test">
+      <input type="file" name="file">
+    </div>
+
+    <div class="test">
       <input type="submit" value="submit" size="20"/>
     </div>
   </form>
