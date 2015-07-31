@@ -34,7 +34,7 @@
   </style>
 </head>
 <body>
-  <form id="form1" runat="server">
+  <form id="form1" method="post">
     <div class="test">
       <input type="text" name="textbox" ></input>
     </div>
