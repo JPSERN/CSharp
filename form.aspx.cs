@@ -17,10 +17,15 @@ public partial class FormTest : System.Web.UI.Page
 
         //アップロードしたテキストファイルを開く
         //テキストファイル以外はどうするんだと思うがとりあえずお試しで
-        System.IO.StreamReader reader = new System.IO.StreamReader(
-            Request.Files.Get("file").InputStream
-        );
-        String text = reader.ReadToEnd();
-        Debug.Write(text);
+        HttpPostedFile file = Request.Files.Get("file");
+        if (file is HttpPostedFile)
+        {
+            System.IO.StreamReader reader = new System.IO.StreamReader(file.InputStream);
+            Debug.WriteLine("ファイルが見つかりました");
+            String text = reader.ReadToEnd();
+            Debug.Write(text);
+        }
+
+
     }
 }
