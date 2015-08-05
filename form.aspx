@@ -34,7 +34,7 @@
   </style>
 </head>
 <body>
-  <form id="form1" method="post">
+  <form id="form1" method="post" enctype="multipart/form-data">
     <div class="test">
       <input type="text" name="textbox" ></input>
     </div>

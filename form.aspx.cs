@@ -18,6 +18,7 @@ public partial class FormTest : System.Web.UI.Page
         //アップロードしたテキストファイルを開く
         //テキストファイル以外はどうするんだと思うがとりあえずお試しで
         HttpPostedFile file = Request.Files.Get("file");
+        //HttpPostedFile file = Request.Files[0];
         if (file is HttpPostedFile)
         {
             System.IO.StreamReader reader = new System.IO.StreamReader(file.InputStream);
