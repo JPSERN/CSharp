@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using System.IO;
 
 public partial class FormTest : System.Web.UI.Page
 {
@@ -17,11 +18,11 @@ public partial class FormTest : System.Web.UI.Page
 
         //アップロードしたテキストファイルを開く
         //テキストファイル以外はどうするんだと思うがとりあえずお試しで
-        HttpPostedFile file = Request.Files.Get("file");
-        //HttpPostedFile file = Request.Files[0];
+        //HttpPostedFile file = Request.Files.Get("file");
+        HttpPostedFile file = Request.Files["file"];//Reques.Form 同様これでもいける
         if (file is HttpPostedFile)
         {
-            System.IO.StreamReader reader = new System.IO.StreamReader(file.InputStream);
+            StreamReader reader = new StreamReader(file.InputStream);
             Debug.WriteLine("ファイルが見つかりました");
             String text = reader.ReadToEnd();
             Debug.Write(text);
