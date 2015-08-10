@@ -25,10 +25,8 @@ public partial class FormTest : System.Web.UI.Page
         var file = Request.Files["file"];//Reques.Form 同様これでもいける
         if (file is HttpPostedFile)
         {
-            StreamReader reader = new StreamReader(file.InputStream);
-            Debug.WriteLine("ファイルが見つかりました");
-            //String text = reader.ReadToEnd();
-            //Debug.Write(text);
+            file.SaveAs(Page.MapPath("./sampleimg.jpg"));
+            Debug.WriteLine("ファイルを保存しました");
         }
 
 
