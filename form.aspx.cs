@@ -14,18 +14,21 @@ public partial class FormTest : System.Web.UI.Page
         Debug.WriteLine("フォームテストなう");
         Debug.WriteLine(Request.Form.Get("textbox"));
         Debug.WriteLine(Request.Form.Get("area"));
+        var textbox = Request.Form["textbox"];
+        var area = Request.Form["area"];
+        var lang = Request.Form["lang"];
         Debug.WriteLine(Request.Form.Get("lang"));//チェックボックスの値全部取れるけど、string なのよね。。。
 
         //アップロードしたテキストファイルを開く
         //テキストファイル以外はどうするんだと思うがとりあえずお試しで
         //HttpPostedFile file = Request.Files.Get("file");
-        HttpPostedFile file = Request.Files["file"];//Reques.Form 同様これでもいける
+        var file = Request.Files["file"];//Reques.Form 同様これでもいける
         if (file is HttpPostedFile)
         {
             StreamReader reader = new StreamReader(file.InputStream);
             Debug.WriteLine("ファイルが見つかりました");
-            String text = reader.ReadToEnd();
-            Debug.Write(text);
+            //String text = reader.ReadToEnd();
+            //Debug.Write(text);
         }
 
 
