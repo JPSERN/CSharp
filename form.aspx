@@ -35,9 +35,11 @@
 </head>
 <body>
   <form id="form1" method="post" enctype="multipart/form-data">
-    <div class="test">
-      <input type="text" name="textbox" ></input>
-    </div>
+    <ol>
+      <li class="test"><input type="text" name="hoge" ></li>
+      <li class="test"><input type="text" name="hoge" ></li>
+      <li class="test"><textarea name="hoge"></textarea></li>
+    </ol>
 
     <div class="test">
       <textarea name="area" class="area"></textarea>

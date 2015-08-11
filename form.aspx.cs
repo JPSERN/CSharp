@@ -17,6 +17,7 @@ public partial class FormTest : System.Web.UI.Page
         var textbox = Request.Form["textbox"];
         var area = Request.Form["area"];
         var lang = Request.Form["lang"];
+        var hoge = Request.Form["hoge"];
         Debug.WriteLine(Request.Form.Get("lang"));//チェックボックスの値全部取れるけど、string なのよね。。。
 
         //アップロードしたテキストファイルを開く
