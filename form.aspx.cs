@@ -24,11 +24,8 @@ public partial class FormTest : System.Web.UI.Page
         //テキストファイル以外はどうするんだと思うがとりあえずお試しで
         //HttpPostedFile file = Request.Files.Get("file");
         var file = Request.Files["file"];//Reques.Form 同様これでもいける
-        if (file is HttpPostedFile)
-        {
-            file.SaveAs(Page.MapPath("./sampleimg.jpg"));
-            Debug.WriteLine("ファイルを保存しました");
-        }
+        file.SaveAs(Page.MapPath("./sampleimg.jpg"));
+        Debug.WriteLine("ファイルを保存しました");
 
 
     }
