@@ -34,7 +34,7 @@
   </style>
 </head>
 <body>
-  <form id="form1" method="post" enctype="multipart/form-data">
+  <form id="form1" method="POST" enctype="multipart/form-data">
     <ol>
       <li class="test"><input type="text" name="hoge" ></li>
       <li class="test"><input type="text" name="hoge" ></li>

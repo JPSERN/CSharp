@@ -19,13 +19,35 @@ public partial class FormTest : System.Web.UI.Page
         var lang = Request.Form["lang"];
         var hoge = Request.Form["hoge"];
         Debug.WriteLine(Request.Form.Get("lang"));//チェックボックスの値全部取れるけど、string なのよね。。。
+        HttpPostedFile file = Request.Files["file"];
+        try
+        {
+            Debug.WriteLine("trying");
+            //String fullpath = "C:\\Users\\SDP5008\\Desktop\\個人用\\csharp.txt";
+            StreamReader reader = new StreamReader(Request.InputStream);
+            String result = reader.ReadToEnd();
+            Debug.WriteLine(result);
+            Debug.WriteLine("success");
+            Debug.WriteLine("--breakpoint--");
+        }
+        catch(NullReferenceException exception)
+        {
+            var error = exception.Message;
+        }
+
+        //GET 用
+        var g_text = Request.QueryString["textbox"];
+        var g_texts = Request.QueryString["hoge"];
+        var g_area = Request.QueryString["area"];
+        var g_lang = Request.QueryString["lang"];
+        Debug.WriteLine("ここまで");
 
         //アップロードしたテキストファイルを開く
         //テキストファイル以外はどうするんだと思うがとりあえずお試しで
         //HttpPostedFile file = Request.Files.Get("file");
-        var file = Request.Files["file"];//Reques.Form 同様これでもいける
-        file.SaveAs(Page.MapPath("./sampleimg.jpg"));
-        Debug.WriteLine("ファイルを保存しました");
+        //var file = Request.Files["file"];//Reques.Form 同様これでもいける
+        //file.SaveAs(Page.MapPath("./sampleimg.jpg"));
+        //Debug.WriteLine("ファイルを保存しました");
 
 
     }
